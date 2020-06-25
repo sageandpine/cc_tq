@@ -5,7 +5,7 @@ export class App {
   private tk: TezosToolkit = Tezos;
 
   constructor() {
-    this.tk.setProvider({ rpc: 'https://carthagenet.SmartPy.io' });
+    this.tk.setProvider({ rpc: 'https://rpcalpha.tzbeta.net' });
   }
 
   public initUI() {
