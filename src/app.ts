@@ -5,7 +5,7 @@ export class App {
   private tk: TezosToolkit = Tezos;
 
   constructor() {
-    this.tk.setProvider({ rpc: 'https://rpc.tezrpc.me' });
+    this.tk.setProvider({ rpc: 'https://carthagenet.SmartPy.io' });
   }
 
   public initUI() {
@@ -34,7 +34,7 @@ export class App {
     $('#balance').html(balance);
   }
 
-  private getBalance(address: string) {
+  async private getBalance(address: string) {
     this.tk.rpc
       .getBalance(address)
       .then(balance => this.showBalance(balance.toNumber() / 1000000))
